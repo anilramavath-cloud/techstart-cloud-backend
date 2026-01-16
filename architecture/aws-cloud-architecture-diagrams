@@ -1,2 +1,36 @@
 Images for the project
 
+
+                    ┌─────────────────────┐
+                    │     Amazon EC2       │
+                    │  Web / App Server    │
+                    │  (IAM Role)          │
+                    └─────────┬───────────┘
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+┌───────▼───────┐     ┌───────▼────────┐   ┌────────▼────────┐
+│ Amazon RDS    │     │ Amazon DynamoDB │   │   Amazon S3     │
+│ MySQL         │     │ Event / Audit   │   │ File Storage    │
+│ (Encrypted)   │     │ (Encrypted)     │   │ (Encrypted)    │
+└───────┬───────┘     └────────┬────────┘   └────────┬────────┘
+        │                      │                      │
+        └──────────────┬───────┴──────────────┬───────┘
+                       │                      │
+               ┌───────▼────────┐     ┌───────▼────────┐
+               │ AWS Lambda     │     │ CloudWatch     │
+               │ Event Handler  │     │ Logs/Metrics   │
+               └───────┬────────┘     └────────────────┘
+                       │
+               ┌───────▼────────┐
+               │ Amazon SNS     │
+               │ Email Notify   │
+               └────────────────┘
+
+
+        ┌──────────────────────────────────────────┐
+        │              AWS KMS                     │
+        │  Customer Managed CMK                    │
+        │  (Encryption at Rest)                    │
+        └──────────────────────────────────────────┘
+https://chatgpt.com/s/m_696aab59535c8191bc7d697a31fec598
