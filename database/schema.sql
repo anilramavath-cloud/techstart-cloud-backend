@@ -1,0 +1,10 @@
+CREATE DATABASE techstart;
+USE techstart;
+
+CREATE TABLE users (
+  id VARCHAR(50) PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
