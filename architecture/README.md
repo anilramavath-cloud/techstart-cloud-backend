@@ -18,4 +18,8 @@ Lambda:
 SNS:
 - Sends email notifications
 
+
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/8f71d56b-8c2f-4508-976a-95c5c8b62d98" />
+
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/84d5e993-dea5-45a2-9f59-e2947e8ccd0a" />
